@@ -1,0 +1,35 @@
+ Type casting means storing the different data type values into different data types. 
+
+Eg. 
+
+   Int x = 5.9 
+
+   float y = 8;
+
+This phenomenon is called type casting or type conversion. There are two types of type casting.
+
+
+Implicit type casting.
+
+
+Explicit typecasting. (needed a type casting operator. Eg. int x = (int)5.9)
+
+All data types can not be typecast to all data types.
+
+ Eg.
+
+
+float k = (int)9.17  // k = 9.000
+
+
+int x = 1000000000, y = 1000000000;
+
+int z = x * y;
+
+printf(“%d”,z);
+
+Is there any problem with the above code snippet? Yes, there will be an integer overflow, because 109 * 109 will give the integer overflow. Only changing z to long long int will not work because the multiplication of two integers will store the result into integers then it will type cast to long long.
+
+product is not being type casted to long, rather x is getting converted to long, and hence long * int is resulting in long
+
+ Long long int z = (long)x * y;
